@@ -1,6 +1,6 @@
 const ao = e => {
   const rand = `${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}`
-  rand.split(', ').map((e, i) => document.getElementById(`point_${1 + i}`).innerHTML = `${e}&nbsp;`)
+  rand.split(', ').map((e, i) => document.getElementById(`point_${1 + i}`).innerHTML = `${e}`)
   const ball1 = document.getElementById("ball1")
   const ball2 = document.getElementById("ball2")
   const ball3 = document.getElementById("ball3")

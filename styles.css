@@ -1,7 +1,10 @@
+
 body {
   font-family: helvetica, arial, sans-serif;
-  font-size: 1.2rem;
-  margin: 3rem;
+  font-size: 1rem;
+   color: #fff;
+   margin: 0;
+   background-color: #000000;
 }
 
 .balls {
@@ -36,45 +39,52 @@ body {
   animation-name: right;
 }
 
-#box {
+/* #box {
   position: relative;
-  border: 12px solid black;
-  height: 600px;
-  width: 500px;
+  border: 12px solid white;
   margin: 0;
-}
+  height: calc(100vh - 1.2rem);
+} */
 
 button {
-  margin-right: 1.2rem;
-  display: inline;
-  font-size: 0.7rem;
+  width: 14rem;
+  font-size: 0.9rem;
   font-weight: 500;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
-  background:linear-gradient(to bottom, #f2f2f2 50%, #dfdede 100%);
+  background:linear-gradient(to bottom, #f2f2f2 50%, #e7e6e6 100%);
   background-color:#f7f7f7;
-  border-radius:6px;
+  border-radius:10px;
   border:1px solid #d4d4d4;
   cursor:pointer;
   color:#000000;
   font-family:Helvetica;
-  padding:6px 14px;
+  padding:6px 10px;
   text-transform: uppercase;
   text-shadow:0px 1px 0px #ffffff;
+  position: absolute;
+  top: calc(100vh / 2 - 2.5rem);
+  left: calc(100vw / 2 - 7rem);
   }
 
 button:hover {
-  background:linear-gradient(to bottom, #eeeeee 50%, #f2f2f2 100%);
+  background:linear-gradient(to bottom, #e7e6e6 50%, #f2f2f2 100%);
   background-color:#ebebeb;
 }
-button:active {
-  position:relative;
-  top:1px;
+
+#panel {
+ display: flex;
+ width: 14rem;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: baseline;
+ position: absolute;
+  top: calc(100vh / 2);
+  left: calc(100vw / 2 - 7rem);
+  font-weight: 400;
 }
 
-.points {
-  font-weight: 400;
-  display: inline;
-  min-width: 200px;
+#panel > * {
+  margin: 0.3rem;
 }
 
 @keyframes down {
@@ -83,7 +93,7 @@ button:active {
   }
 
   100% {
-    top: 550px;
+    top: calc(100% - 50px);
   }
 }
 
@@ -93,7 +103,7 @@ button:active {
   }
 
   100% {
-    right: 450px;
+    right: calc(100% - 50px);
   }
 }
 
@@ -103,7 +113,7 @@ button:active {
   }
 
   100% {
-    left: 450px;
+    left: calc(100% - 50px);
   }
 }
 
@@ -113,6 +123,6 @@ button:active {
   }
 
   100% {
-    bottom: 550px;
+    bottom: calc(100% - 50px);
   }
 }
