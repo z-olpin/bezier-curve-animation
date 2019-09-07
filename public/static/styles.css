@@ -1,0 +1,119 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.3rem;
+  margin: 3rem;
+}
+
+.ball1 {
+  border-radius: 50%;
+  background: #acf;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  animation-name: down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.ball2 {
+  border-radius: 50%;
+  background: #acf;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  animation-name: left;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.ball3 {
+  border-radius: 50%;
+  background: #acf;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  animation-name: up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.ball4 {
+  border-radius: 50%;
+  background: #acf;
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  animation-name: right;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+
+#box {
+  position: relative;
+  border: 12px solid black;
+  height: 600px;
+  width: 500px;
+  margin: 0;
+  background-color: #aa22
+}
+
+button {
+  margin-right: 1.2rem;
+  display: inline;
+}
+
+.points {
+  font-weight: 400;
+  display: inline;
+  min-width: 200px;
+}
+
+@keyframes down {
+  0% {
+    top: 0px;
+  }
+
+  100% {
+    top: 550px;
+  }
+}
+
+@keyframes left {
+  0% {
+    right: 0px;
+  }
+
+  100% {
+    right: 450px;
+  }
+}
+
+@keyframes right {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 450px;
+  }
+}
+
+@keyframes up {
+  0% {
+    bottom: 0px;
+  }
+
+  100% {
+    bottom: 550px;
+  }
+}
