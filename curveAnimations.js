@@ -12,6 +12,6 @@ const ao = e => {
     element.style['animation-timing-function'] = `cubic-bezier(${rand})`
   })
 }
-
+//
 const butt = document.getElementById("butt")
 butt.addEventListener('click', ao)
