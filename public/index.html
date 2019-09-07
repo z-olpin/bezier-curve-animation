@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Bezier Curve</title>
+    <link rel="stylesheet" type="text/css" href="./static/styles.css" />
+  </head>
 
-<head>
-  <title>
-  </title>
-  <link rel="stylesheet" type="text/css" href="./static/styles.css" />
-<body>
-  <p>
-    <button id="butt">Random Bezier Curve</button>
-<span><strong>P1: </strong></span><span class="points" id="point_1"> &nbsp;&nbsp;&nbsp;&nbsp;</span>
-  <span><strong>P2: </strong></span><span class="points" id="point_2"> &nbsp;&nbsp;&nbsp;&nbsp;</span>
-  <span><strong>P3: </strong></span><span class="points" id="point_3"> &nbsp;&nbsp;&nbsp;&nbsp;</span>
-  <span><strong>P4: </strong></span><span class="points" id="point_4"> &nbsp;&nbsp;&nbsp;&nbsp;</span>
-</p>
-  
-  
-  <div id="box">
-    <div class="ball1" id="ball1"></div>
-    <div class="ball2" id="ball2"></div>
-    <div class="ball3" id="ball3"></div>
-    <div class="ball4" id="ball4"></div>
-  </div>
+  <body>
+    <p>
+      <button id="butt">Random Bezier Curve</button>
+      <span><strong>P1: </strong></span><span class="points" id="point_1">
+        0.25&nbsp;</span>
+      <span><strong>P2: </strong></span><span class="points" id="point_2">
+        1.00&nbsp;</span>
+      <span><strong>P3: </strong></span><span class="points" id="point_3">
+        0.25&nbsp;</span>
+      <span><strong>P4: </strong></span><span class="points" id="point_4">
+        1.00&nbsp;</span>
+    </p>
 
+    <div id="box">
+      <div class="balls" id="ball1"></div>
+      <div class="balls" id="ball2"></div>
+      <div class="balls" id="ball3"></div>
+      <div class="balls" id="ball4"></div>
+    </div>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
 
-    const ao = e => {
-      const rand = `${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}`
-      const ball1 = document.getElementById("ball1")
-      const ball2 = document.getElementById("ball2")
-      const ball3 = document.getElementById("ball3")
-      const ball4 = document.getElementById("ball4")
+      const ao = e => {
+        const rand = `${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)}`
+        const curves = rand.split(', ').map((e, i) => document.getElementById(`point_${1 + i}`).innerHTML = `${e}&nbsp;`)
+        const ball1 = document.getElementById("ball1")
+        const ball2 = document.getElementById("ball2")
+        const ball3 = document.getElementById("ball3")
+        const ball4 = document.getElementById("ball4")
+        const balls = [ball1, ball2, ball3, ball4]
+        balls.forEach(element => {
+          element.style['animation-play-state'] = 'paused'
+          element.style['animation-play-state'] = 'running'
+          element.style['animation-timing-function'] = `cubic-bezier(${rand})`
+        })
+      }
 
-      ball1.style['animation-play-state'] = 'paused'
-      ball1.style['animation-play-state'] = 'running'
-      ball1.style['animation-timing-function'] = `cubic-bezier(${rand})`
-
-      ball2.style['animation-play-state'] = 'paused'
-      ball2.style['animation-play-state'] = 'running'
-      ball2.style['animation-timing-function'] = `cubic-bezier(${rand})`
-
-      ball3.style['animation-play-state'] = 'paused'
-      ball3.style['animation-play-state'] = 'running'
-      ball3.style['animation-timing-function'] = `cubic-bezier(${rand})`
-
-      ball4.style['animation-play-state'] = 'paused'
-      ball4.style['animation-play-state'] = 'running'
-      ball4.style['animation-timing-function'] = `cubic-bezier(${rand})`
-
-      const curves = rand.split(', ').map((e, i) => document.getElementById(`point_${1 + i}`).innerHTML = `${e}&nbsp;&nbsp;`)
-    }
-
-    const but = document.getElementById("butt")
-    but.addEventListener('click', ao)
-
-  </script>
-</body>
-
+      const butt = document.getElementById("butt")
+      butt.addEventListener('click', ao)
+    </script>
+  </body>
 </html>
