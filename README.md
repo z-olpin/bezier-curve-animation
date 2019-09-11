@@ -1,4 +1,4 @@
-<h1>Bezier-Animation</h1>
+<h1>Bezier Curve CSS Animation</h1>
 
 <p>A simple css animation. Uses a bezier curve to define movement of animated objects.</p>
 
