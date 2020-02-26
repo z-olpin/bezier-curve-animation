@@ -4,4 +4,4 @@
 
 <a href="https://vxxce.github.io/Bezier-Animation">Live demo</a>
 
-<img src="https://github.com/vxxce/Bezier-Animation/blob/master/sc.png" width="40vw" alt="Screenshot of CSS animation"/>
+<img src="https://github.com/vxxce/Bezier-Animation/blob/master/sc.png" width="50%" alt="Screenshot of CSS animation"/>
