@@ -1,17 +1,17 @@
 body {
   font-family: helvetica, arial, sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
    color: #fff;
    margin: 0;
-   background-color: #000000;
+   background-color: #00f;
 }
 
 .balls {
   border-radius: 50%;
-  background: #acf;
+  background-color: #fff;
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 6rem;
+  height: 6rem;
   margin: 0;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -39,7 +39,7 @@ body {
 }
 
 button {
-  width: 14rem;
+  width: 15rem;
   font-size: 0.9rem;
   font-weight: 500;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -85,7 +85,7 @@ button:hover {
   }
 
   100% {
-    top: calc(100% - 50px);
+    top: calc(100% - 6rem);
   }
 }
 
@@ -95,7 +95,7 @@ button:hover {
   }
 
   100% {
-    right: calc(100% - 50px);
+    right: calc(100% - 6rem);
   }
 }
 
@@ -105,7 +105,7 @@ button:hover {
   }
 
   100% {
-    left: calc(100% - 50px);
+    left: calc(100% - 6rem);
   }
 }
 
@@ -115,6 +115,6 @@ button:hover {
   }
 
   100% {
-    bottom: calc(100% - 50px);
+    bottom: calc(100% - 6rem);
   }
 }
