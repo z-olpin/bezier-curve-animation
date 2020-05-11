@@ -1,5 +1,15 @@
+/* questrial-regular - latin */
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Questrial'), local('Questrial-Regular'),
+       url('./fonts/questrial-v9-latin-regular.woff2') format('woff2'),
+       url('./fonts/questrial-v9-latin-regular.woff') format('woff');
+}
+
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Questrial', helvetica, arial, sans-serif;
   font-size: 16px;
    color: #fff;
    margin: 0;
@@ -40,8 +50,7 @@ body {
 
 button {
   width: 15rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
   box-shadow: inset 0px 1px 0px 0px #ffffff;
   background:linear-gradient(to bottom, #f2f2f2 50%, #e7e6e6 100%);
   background-color:#f7f7f7;
@@ -49,7 +58,7 @@ button {
   border:1px solid #d4d4d4;
   cursor:pointer;
   color:#000000;
-  font-family:Helvetica;
+  font-family:'Questrial';
   padding:6px 10px;
   text-transform: uppercase;
   text-shadow:0px 1px 0px #ffffff;
@@ -70,9 +79,10 @@ button:hover {
  justify-content: space-between;
  align-items: baseline;
  position: absolute;
-  top: calc(100vh / 2);
+  top: calc(100vh / 2 + 1rem)
   left: calc(100vw / 2 - 7rem);
   font-weight: 400;
+  font-size: 1.5rem;
 }
 
 #panel > * {
@@ -117,4 +127,4 @@ button:hover {
   100% {
     bottom: calc(100% - 6rem);
   }
-}
+} 	
