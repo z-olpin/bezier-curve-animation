@@ -1,7 +1,6 @@
-<h1>Bezier Curve CSS Animation</h1>
+# Infinite window rollers
+Using Bezier Curve Keyframes Animations and randomly set control points.</h1>
 
-<p>A simple css animation. Uses a bezier curve to define movement of animated objects.</p>
+## <a href="https://z-olpin.github.io/bezier-curve-animation">Live demo</a>
 
-<a href="https://vxxce.github.io/Bezier-Animation">Live demo</a>
-
-<img src="https://github.com/vxxce/Bezier-Animation/blob/master/sc.png" width="50%" alt="Screenshot of CSS animation"/>
+<img src="https://github.com/z-olpin/bezier-curve-animation/blob/master/sc.png" width="50%" alt="Screenshot of CSS animation"/>
